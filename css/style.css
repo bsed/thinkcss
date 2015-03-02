@@ -1,0 +1,268 @@
+/*@charset "gb2312";*/
+/**
+ * ============================================================================
+ * 版权所有: ThinkCSS
+ * 网站地址: http://code.google.com/p/thinkcss/
+ * ----------------------------------------------------------------------------
+ * $codex 1. id和class命名采用该版块的英文单词或组合命名，并第一个单词小写，第二个单词首个字母大写，如:thinkCss（最新产品/think+Css)
+ * $codex 2. CSS样式表各区块用注释说明
+ * $codex 3. 尽量使用英文命名原则
+ * $codex 4. 尽量不加中杠和下划线
+ * $codex 5. 尽量不缩写，除非一看就明白的单词
+ * $Author: tomcat 
+ * $mailto: <thinkcss@p2h.cn>
+ * $hack :ie 6 _  \ ie7 *+ \  ie6,ie7 *  \  ie7,firefox !important ie9, \9
+*/
+
+/**
+ +------------------------------------------------------------------------------
+ * 网站样式重写
+ +------------------------------------------------------------------------------
+ * @comefrom  互联网
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+ body{ color:#000000; font-family:Verdana, Arial, Helvetica, sans-serif;}
+ * {}
+a{outline:none; text-decoration:none;} a:hover{ text-decoration:underline;}
+html{zoom:1;}html *{outline:0;zoom:1;} html button::-moz-focus-inner{border-color:transparent!important;} 
+body{overflow-x: hidden; font-size:12px;} body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;} table{/*border-collapse:collapse;border-spacing:0;*/} fieldset,a img{border:0;} address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal;} li{list-style:none;} caption,th{text-align:left;} h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;} q:before,q:after{content:'';}
+
+/**
+ +------------------------------------------------------------------------------
+ * Public Class
+ +------------------------------------------------------------------------------
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+.clearfix:after {content:"."; display:block; height:0; clear:both; visibility:hidden; }.clearfix {display:block;}.clear{ clear:both;}/* 清除浮动*/
+.colwrapper { overflow:hidden; zoom:1 /*for ie*/; margin:5px auto; }/* 高度自适应 */ 
+.strong{ font-weight: bold;} .left{ float: left;} .right{ float: right;} .center{ margin:0 auto; text-align:center;}
+.show{ display:block; visibility:visible;}.hide{ display: none; visibility:hidden;}
+.block{ display:block;} .inline{ display:inline;}
+.transparent{filter:alpha(opacity=50); -moz-opacity:0.5;/** Firefox 3.5即将原生支持opacity属性，所以本条属性只在Firefox3以下版本有效 ***/ -khtml-opacity: 0.5; opacity: 0.5; } .break{ word-wrap:break-word;overflow:hidden; /*word-break:break-all;*/}
+
+.tal{ text-align:left} .tar{ text-align:right;}
+
+/* 固定不动 */
+.fixed{
+	position:fixed; clip:rect(0 100% 100% 0); _position:absolute;
+	
+	/* 底部 */
+	bottom:0px; left:0px; _top:expression(document.documentElement.scrollTop+document.documentElement.clientHeight-this.clientHeight);
+	/*_left:expression(document.documentElement.scrollLeft + document.documentElement.clientWidth - offsetWidth);*/
+	
+	/* 左侧 */
+	/*left:0px;*/
+	/*_top:expression(document.documentElement.scrollTop+document.documentElement.clientHeight-this.clientHeight);*/
+	/*_left:expression(document.documentElement.scrollLeft + document.documentElement.clientWidth - offsetWidth);*/
+}
+
+*html{ background-image:url(about:blank); background-attachment:fixed; /* 解决固定层在IE6下闪的问题 */}
+
+
+/* png透明 */
+.pngfix{filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='images/x.png');}
+
+/* 渐变 */
+.gradient{filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#dedede);
+    background: -moz-linear-gradient(top, #ffffff, #dedede);}
+	
+
+
+/* 解决ie下连接加粗的鼠标样式问题*/
+a strong{ cursor:pointer;}
+
+/**
+ +------------------------------------------------------------------------------
+ * FCK 兼容解决方案
+ +------------------------------------------------------------------------------
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+em{ font-style:italic !important;} strike{ text-decoration:line-through !important;} strong{ font-weight:bold !important;} u{ text-decoration:underline !important;}
+
+/**
+ +------------------------------------------------------------------------------
+ * 表单样式
+ +------------------------------------------------------------------------------
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+/* input[type=text]:focus, input.text:focus, input.title:focus, textarea:focus, select:focus {  border-color:#666;} */
+input{/*behavior:url(input.htc);*/ border:1px #ccc solid; margin:1px; padding:1px;}/*Only for ie 5.0+*/
+/*label input{width:14px;height:14px;border:0;}*/ /*For input type is Radio*/
+input:hover{border:1px #f60 solid;background:#f5f5f5;}/*For orther browsers*/
+
+/**
+ +------------------------------------------------------------------------------
+ * 网站整体颜色总汇
+ +------------------------------------------------------------------------------
+ * @codex  颜色:使用颜色的名称或者16进制代码,如 
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+.ff8600,ff86aa a{ color:#ff8600;}
+
+/**
+ +------------------------------------------------------------------------------
+ * 网站整字体大小
+ +------------------------------------------------------------------------------
+ * @codex   字体大小,直接使用"font+字体大小"作为名称,如
+ * @package  ORG
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+.font14px{ font-size:14px;}
+.font9pt{ font-size:9pt;}
+
+
+/**
+ +------------------------------------------------------------------------------
+ * 网站整布局命名规范
+ +------------------------------------------------------------------------------
+ * @codex   id和class命名采用该版块的英文单词或组合命名 如:newRelease
+ * @package  ORG
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+ 
+ 
+/*页面外围控制整体布局宽度*/
+.wrapper{}
+
+/* 网站外围阴影 */
+.shardow{}
+
+/* 容器盒子 */
+.container{ width:960px ; height: ; margin:0 auto; padding: ; background:url(../imgs/grid.png) repeat;}
+
+/* 网站头部 */
+.header{ width:100%; position:relative; height: 100px;}
+	.header .logo{
+	position: absolute;
+	display:block;
+	left: 11px;
+	top: 2px;
+	width: 102px;
+	height: 73px;
+}
+.toplink{ position: absolute; display:block; left: 680px; top: 9px; width: 257px; height: 20px; }
+	
+/* 头部导航 */
+.nav{
+	position:absolute;
+	width:702px;
+	height:28px;
+	left: 167px;
+	top: 61px;
+}
+.nav a{ display:inline; float:left; width:50px; height:30px; float:left; background:#EEF6FF; text-align:center;}
+.nav a:hover,
+.nav a.hover{ background:#ccc; text-decoration:none;}
+	
+/*广告*/
+.banner{}
+
+/*页面主体*/
+.pagebody{ width:100%; height:auto; overflow:hidden; border:#CCC solid 1px;}
+
+.leftpage, .mainpage, .rightpage{ float:left; margin-right:10px; background:#fff; }
+
+/*页面左侧*/
+.leftpage{}
+
+/*页面右侧*/
+.mainpage{}
+
+/* 页面右侧 */
+.rightpage{}
+
+/* 列表模型 */
+.list{}
+
+/*侧栏*/
+.sidebar {}
+
+/*栏目*/
+.column{}
+
+/*登录条*/
+.loginbar{}
+
+/*热点*/
+.hot{}
+
+/*新闻*/
+.news{}
+
+/*下载*/
+.download{}
+
+/*子导航*/
+.subnav{}
+
+/*菜单*/
+.menu{}
+
+/*子菜单*/
+.submenu{}
+
+/*搜索*/
+.search{}
+
+/*友情链接*/
+.friendlink{}
+
+/*版权*/
+.copyright{}
+
+/*滚动*/
+.scroll{}
+
+/*内容*/
+.content{}
+
+/*标签页*/
+.tab{}
+
+/*文章列表*/
+.list{}
+
+/*提示信息*/
+.msg{}
+
+/*小技巧*/
+.tips{}
+
+/*栏目标题*/
+.title{}
+
+/*加入*/
+.joinus{}
+
+/*指南*/
+.guild{}
+
+/*服务*/
+.service{}
+
+/*注册*/
+.regsiter{}
+
+/*状态*/
+.status{}
+
+/*投票*/
+.vote{}
+
+/*合作伙伴*/
+.partner{}
+
+/* 分页 */
+.page{ text-align:center; background:#eee;}
+	.page a{ border:#ccc solid 1px; margin-left:3px; padding:4px 4px;}
+	.page a:hover{ text-decoration:none;}
+
+/*页脚*/
+.footer{ }

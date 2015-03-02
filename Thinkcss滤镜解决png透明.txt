@@ -1,0 +1,4 @@
+
+
+/* 一个来自ie滤镜属性的png透明解决方案 */
+#pngimg{filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='images/x.png');}

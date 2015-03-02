@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>ThinkCSS CSS Framework</title>
+<script src="swf/flvplayer/swfobject.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+
+    
+	<span id="player1" style="padding:0; margin:0;">
+        <embed height="307" width="527" flashvars="file=http://xxxxxx.com/xxxxxx.flv&amp;width=527&amp;height=307&amp;autostart=true" allowfullscreen="true" quality="high" name="single" id="single" style="" src="swf/flvplayer/mediaplayer.swf" type="application/x-shockwave-flash"></embed></span>
+	  <script type="text/javascript">
+			var s1 = new SWFObject("swf/flvplayer/mediaplayer.swf","single","527","307","7");
+			s1.addParam("allowfullscreen","true");
+			s1.addVariable("file","http://xxxxxx.com/xxxxxx.flv");
+			s1.addVariable("width","527");
+			s1.addVariable("height","307");
+			s1.addVariable("autostart","true");
+			s1.write("player1");
+		</script>
+        
+
+</body>
+</html> 

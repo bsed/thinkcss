@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lazy Load Enabled on Container</title>
+<script src="images/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="images/jquery.lazyload.mini.js" type="text/javascript" charset="utf-8"></script>
+
+
+  <script type="text/javascript" charset="utf-8">
+      $(function() {          
+         // $("img").lazyload({placeholder : "images/grey.gif", container: $("#container")});
+		 $("img").lazyload({placeholder : "images/grey.gif", effect : "fadeIn" });
+      });
+  </script>  
+
+
+</head><body>
+
+    <div id="container">
+        <img   src="images/bmw_m1_hood.jpg" height="574" width="765"><br>
+        <img   src="images/bmw_m1_side.jpg" height="574" width="765"><br>
+        <img  src="images/bmw_m3_gt.jpg" height="574" width="765"><br>
+        <img  src="images/corvette_pitstop.jpg" height="574" width="765"><br>
+        <img  src="images/viper_1.jpg"  height="574" width="765"><br>
+        <img src="images/viper_corner.jpg" height="574" width="765"><br>
+    </div>
+
+  </body></html>

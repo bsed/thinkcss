@@ -1,0 +1,12 @@
+/*@charset "gb2312";*/
+/**
+ * ============================================================================
+ * 版权所有: ThinkCSS
+ * 网站地址: http://www.thinkcss.cn
+ * 用到FCK的朋友建立载入这个文件
+ * ----------------------------------------------------------------------------
+**/
+em{ font-style:italic !important;}
+strike{ text-decoration:line-through !important;}
+strong{ font-weight:bold !important;}
+u{ text-decoration:underline !important;}

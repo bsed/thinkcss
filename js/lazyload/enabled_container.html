@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Lazy Load Enabled on Container</title>
+  <meta name="generator" content="Mephisto">
+  <link href="images/main2.css" rel="stylesheet" type="text/css">
+  <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/tuupola" title="Atom feed">
+  <script src="images/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="images/jquery_002.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+      $(function() {          
+          $("img").lazyload({placeholder : "img/grey.gif", container: $("#container")});
+      });
+  </script>  
+  <style type="text/css">
+  #sidebar {
+    width: 0px;
+  }
+
+  #content {
+    width: 804px;
+  }
+
+  #container {
+    height: 600px;
+    overflow: scroll;
+  }
+
+  </style>
+
+</head><body>
+  <div id="wrap"> 
+    <div id="header">
+      <p>
+        </p><h1>Lazy Load</h1><br>
+        <small>Image lazy loader plugin for jQuery.</small>
+        <ul id="nav">
+          <li id="first"><a href="http://www.appelsiini.net/" class="active">weblog</a></li>
+          <li><a href="http://www.appelsiini.net/projects" class="last">projects</a></li>
+          <!--
+          <li><a href="/cv" class="last">cv</a></li>
+        -->
+        </ul>
+      
+    </div>
+    <div id="content">
+      
+  <h2>Plugin enabled on container</h2>
+  <div class="entry">
+    
+    <p>
+      Images below the visible area (the ones lower than container bottom) are not loaded. When scrolling down
+      they are loaded when needed. Shift-reload to test again. Compare this to page where plugin is
+      <a href="disabled.html">disabled</a> or same page with <a href="enabled_fadein.html">fadein effect</a>.
+    </p>
+
+    <code>
+      </code><pre> $("img").lazyload({         
+     placeholder : "img/grey.gif",
+     container: $("#container")
+ });</pre>   
+    
+
+    <div id="container">
+        <img original="img/bmw_m1_hood.jpg?1293181708" src="images/bmw_m1_hood.jpg" alt="BMW M1 Hood" height="574" width="765"><br>
+        <img original="img/bmw_m1_side.jpg?1293181708" src="images/bmw_m1_side.jpg" alt="BMW M1 Side" height="574" width="765"><br>
+        <img original="img/viper_1.jpg?1293181708" src="images/grey.gif" alt="Viper 1" height="574" width="765"><br>
+        <img original="img/viper_corner.jpg?1293181708" src="images/grey.gif" alt="Viper Corner" height="574" width="765"><br>
+        <img original="img/bmw_m3_gt.jpg?1293181708" src="images/grey.gif" alt="BMW M3 GT" height="574" width="765"><br>
+        <img original="img/corvette_pitstop.jpg?1293181708" src="images/grey.gif" alt="Corvette Pitstop" height="574" width="765"><br>
+    </div>
+
+    </div>
+    <div id="sidebar">
+
+  </div>
+  
+  <div id="footer">
+  </div>
+
+  <script src="images/a" type="text/javascript"></script>
+  <script src="images/urchin.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    _uacct = "UA-190966-1";
+    urchinTracker();
+  </script>
+
+</div></div></body></html>

@@ -1,0 +1,21 @@
+在浏览网页的时候我们有时可以看到有的网页滚动条颜色不是系统默认的，而是漂亮的红色或其它颜色，其实这就是在网页代码之间加入代码来实现的，具体是哪些代码呢？　 
+     网页滚动条代码及其解释如下：（复制时请将大写尖括号改为小写） 
+
+以下是引用片段：
+＜Style type="text/css"＞  
+＜!--　  
+Body {  
+scrollbar-face-color:#C0C0C0; （表面）  
+scrollbar-highlight-color:#FFFFFF;（亮边）  
+scrollbar-3dlight-color:#C0C0C0;（3D亮边）  
+scrollbar-darkshadow-color:#000000; （3D暗边）  
+scrollbar-Shadow-color:#808080;（阴影）  
+scrollbar-arrow-color:#000000; （箭头）  
+scrollbar-track-color:#E0E0E0;（滚动区）  
+}  
+--＞  
+＜/Style＞ 
+ 
+
+     以上的代码，从Body以下的，凡是#号后面的，都是颜色代码，颜色代码为16进制。而括号内的文字是对左边代码的注释，在加入网页代码时不要输入。这样一来，你就可以DIY自己的网页滚动条了。
+

@@ -1,0 +1,3 @@
+#nev img { float:left; margin-left:5px; width:60px; height:60px}
+#nev a img { filter:gray(); border:#999999 solid 2px}
+#nev a:hover img { filter:;}

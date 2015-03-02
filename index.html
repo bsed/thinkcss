@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>Thinkcss首页 - 享你所想 - 开源CSS框架</title>
+<meta name="keywords" content="Thinkcss, css框架, 开源CSS框架 , CSS兼容代码 , CSS框架下载"/>
+<meta name="description" content="TC (”ThinkCSS”) 是一个 (X)HTML/CSS 框架  ,它的目的是减少你的css开发时间。它提供一个可靠的css基础去创建你的项目,能够用于网站的快速设计,通过重设和重建浏览器标准，可以让每个网站防  止枯燥的跨浏览器兼容性测试。你可以将他理解成一套模板，里面包含了大多数站点中所需要的那些css类。他很小，只有四个文件而已。总共不到6KB。 "/>
+<style>
+	*{ margin:0; padding:0; border:0;}
+	body{ font-size:13px; line-height:25px; padding:20px; font-family:Verdana, Arial, Helvetica, sans-serif; color:#333;} 
+	h4{ font-size:22px; font-weight:normal; margin-top:5px; background:#666; padding:5px 10px; color:#fff; cursor:pointer;} h1{ font-size:40px; margin:20px 0;}
+	small{ font-size:11px; font-weight:normal; color:#666;} 
+	ol li{ list-style:inside;}pre{ border:#999 solid 1px; padding:20px; margin-bottom:10px; font-family:consolas,"Courier New",courier,monospace;} 
+	.pink{ color:#ff00ff;} .blue{ color:#0000ff;} .deepblue{ color:#000099;} .gray{ color:#999999;} .red{ color:#ff0000;} .black{ color:#000;} .white{ color:white;}
+</style>
+<script src="js/jquery-1.3.2.min.js"></script>
+<script>
+	$(function(){
+		$('.thinkcssbox h4').hover(function(){
+			$(this).css('background','#333');
+		},
+		function(){
+			$(this).css('background','#666');
+		})
+		$('.thinkcssbox h4').click(function(){
+			$(this).parent().find('.c').slideToggle();
+		})
+	})
+</script>
+</head>
+
+<body>
+<h1><font color="#1a91d0">Think</font><font color="#8abb0b">CSS</font>&trade;  <small>CSS开源框架官方下载:<a href="http://code.google.com/p/thinkcss">http://code.google.com/p/thinkcss</a></small></h1>
+
+<div class="thinkcssbox">
+<h4>ThinkCSS是什么 </h4>
+<div class="c">
+<small>Thinkcss is an open source css framework of China</small>
+<p>TC (”ThinkCSS”) 是一个 (X)HTML/CSS 框架  ,它的目的是减少你的css开发时间。它提供一个可靠的css基础去创建你的项目,能够用于网站的快速设计,通过重设和重建浏览器标准，可以让每个网站防  止枯燥的跨浏览器兼容性测试。你可以将他理解成一套模板，里面包含了大多数站点中所需要的那些css类。他很小，只有四个文件而已。总共不到6KB。 </p>
+</div>
+</div>
+
+
+<div class="thinkcssbox">
+<h4>ThinkCSS功能介绍 </h4>
+<div class="c">
+<small>Breakdown of several major features Thinkcss</small>
+<ol>
+<li>规范命名了CSS结构名称，这样也是为了便于SEO的优化，采用英文命名，使结构合理易懂，便于二次修改。</li>
+<li>重写了W3C的一些默认样式，做一个网站架构之前这个都是必须的，一些不兼容的标签这里基本都被从定义了，</li>
+<li>定义了一些经常用到的样式，比如 clear（清除样式），transparent(透明度)，这些都是兼容的代码，目前考虑的是IE6,IE7,IE8,  Firefox的兼容，大家可以放心使用</li>
+<li>预先写好了一些简单的网站结构，默认的是960宽度的页面居中显示，当然不适合可以去 layout.css 里面改一下就行   </li>
+<li>参阅了大部分网站导航 ，写了一个大众化的导航的主体结构，用 a:hover 事件简单的实现了按钮的切换效果，代码里可以再做调整</li>
+<li>页面默认包含了 Jquery框架，方面写网页的一些互动效果   </li>
+<li>加入了&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=7&quot;&gt;  &lt;/meta&gt; 强制引擎，还应对刚刚‘上任’的IE8浏览器，以后IE8部分普及之后，可以在将这句话去掉</li>
+</ol>
+</div>
+</div>
+
+
+
+<div class="thinkcssbox">
+<h4>ThinkCSS代码重写</h4>
+<div class="c">
+<small>Thinkcss Recommend some fragments of code-compatible</small>
+<pre> <span class="pink">* {</span> <span class="deepblue">color</span>:<span class="blue">#000000</span>; font-family:<span class="blue">Verdana, Arial, Helvetica, sans-serif</span>;<span class="pink">} * a:link{</span> text-decoration:<span class="blue">underline</span>;<span class="pink">}</span>
+<span class="pink">a{</span>outline:<span class="blue">none</span>; text-decoration:<span class="blue">none</span><span class="pink">;} a:hover{</span> text-decoration:<span class="blue">underline</span><span class="pink">;}</span>
+<span class="pink">html{</span>zoom:<span class="blue">1</span><span class="pink">;}html *{</span>outline:<span class="blue">0</span>;zoom:<span class="blue">1</span><span class="pink">;} html button::-moz-focus-inner{</span>border-color:<span class="blue">transparent</span><span class="red">!important</span><span class="pink">;}</span> 
+<span class="pink">body{</span>overflow-x: <span class="blue">hidden</span>; font-size:<span class="blue">12px</span><span class="pink">;} body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{</span>margin:<span class="blue">0</span>;padding:<span class="blue">0</span><span class="pink">;} 
+table{</span><span class="gray">/*border-collapse:collapse;border-spacing:0;*/</span><span class="pink">} fieldset,a img{</span>border:<span class="blue">0</span>;<span class="pink">} address,caption,cite,code,dfn,em,th,var{</span>font-style:<span class="blue">normal</span>;font-weight:<span class="blue">normal</span><span class="pink">;} 
+li{</span>list-style:<span class="blue">none</span><span class="pink">;} caption,th{</span>text-align:<span class="blue">left</span><span class="pink">;} h1,h2,h3,h4,h5,h6{</span>font-size:<span class="blue">100%</span>;font-weight:<span class="blue">normal</span><span class="pink">;} q:before,q:after{</span>content:''<span class="pink">;}</span></pre>
+</div>
+</div>
+
+
+
+
+<div class="thinkcssbox">
+<h4>ThinkCSS使用方法 <small><a href="css/thinkcss.css" class="white">查看thinkcss文件</a></small></h4>
+<div class="c">
+<p><small>Thinkcss<span id="result_box"><span title=""> how to use</span></span></small></p>
+<p>使用Thinkcss的方法很简单，将Thinkcss文件包含到网站头部信息里面就可以了。方法如下，蓝色代码为调用方法。</p>
+<pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;<br />&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;<br />&lt;head&gt;<br />&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;<br />&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=7&quot; /&gt;<br />&lt;title&gt;Thinkcss CSS Framework &lt;/title&gt;<br /><span class="deepblue">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/thinkcss.css&quot;&gt;</span><br />&lt;!--[if ie 6]&gt;<br />&lt;link rel=&quot;stylesheet&quot; href=&quot;css/ie6.css&quot;&gt;<br />&lt;![endif]--&gt;<br />&lt;script type=&quot;text/javascript&quot; src=&quot;js/jScript.js&quot;&gt;&lt;/script&gt;<br />&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.min.js&quot;&gt;&lt;/script&gt;<br />&lt;/head&gt;</pre>
+</div>
+</div>
+
+
+
+<div class="thinkcssbox">
+<h4>ThinkCSS代码片段 </h4>
+<div class="c">
+<p><small>Thinkcss Recommend some fragments of code-compatible</small></p>
+<pre><span class="gray">/****这是一段兼容IE6+,FIREFOX等主流浏览器的透明度代码***/</span><span class="pink">
+.transparent{</span>filter:alpha(opacity=50)<span class="pink">; -moz-opacity:</span>0.5;<span class="gray">/** Firefox 3.5即将原生支持opacity属性，所以本条属性只在Firefox3以下版本有效 ***/</span> <span class="pink">-khtml-opacity:</span> 0.5; <span class="pink">opacity:</span> 0.5; }</pre>
+<pre><span class="gray">/**这是一段使整个网站变成黑白的代码片段(支持所有IE，firefox)**/</span>
+<span class="pink">html { </span>filter:progid:<span class="blue">DXImageTransform.Microsoft.BasicImage(grayscale=1)</span>;<span class="pink"> } body{</span>filter:<span class="blue">Gray</span>;<span class="pink">} img{</span>filter:<span class="blue">Gray</span>;<span class="pink">}</span> </pre>
+<pre><span class="gray">/**网页滚动条样式代码片段(兼容ie+)**/</span>
+<span class="pink">Body { </span> <br />scrollbar-face-color<span class="blue">:#C0C0C0;</span> <span class="gray">（表面）</span>  <br />scrollbar-highlight-color<span class="blue">:#FFFFFF;</span><span class="gray">（亮边）  </span><br />scrollbar-3dlight-color<span class="blue">:#C0C0C0;</span><span class="gray">（3D亮边）</span>  <br />scrollbar-darkshadow-color<span class="blue">:#000000;</span> <span class="gray">（3D暗边）</span>  <br />scrollbar-Shadow-color<span class="blue">:#808080;</span><span class="gray">（阴影） </span> <br />scrollbar-arrow-color<span class="blue">:#000000;</span> <span class="gray">（箭头）</span>  <br />scrollbar-track-color<span class="blue">:#E0E0E0;</span><span class="gray">（滚动区）</span> 
+<span class="pink">} </span></pre>
+</div>
+</div>
+
+
+<div class="thinkcssbox">
+<h4>ThinkCSS官方网站  </h4>
+<div class="c">
+<p><small>Thinkcss Recommend some fragments of code-compatible</small></p>
+<p>官方网站：<a href="#">http://www.thinkcss.cn</a></p>
+<p>官方下载：<a href="http://code.google.com/p/thinkcss">http://code.google.com/p/thinkcss</a></p>
+</div>
+</div>
+
+
+</body>
+</html>
